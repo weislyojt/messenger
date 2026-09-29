@@ -6,7 +6,9 @@ import { DATA_DIR } from './db.js';
 // Session secret: use SESSION_SECRET if set, otherwise generate one and keep it on
 // the data volume so restarts don't sign everyone out.
 function loadSecret() {
-  if (process.env.SESSION_SECRET) return process.env.SESSION_SECRET;
+  const env = process.env.SESSION_SECRET || '';
+  if (env.length >= 32 && !env.includes('${{')) return env;
+  if (env) console.warn('SESSION_SECRET is too short, ignoring it and using a generated secret.');
   const file = path.join(DATA_DIR, 'session.secret');
   try {
     return fs.readFileSync(file, 'utf8').trim();

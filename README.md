@@ -34,7 +34,7 @@ Data (the SQLite database and uploaded files) goes in `./data`. Set `DATA_DIR` t
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `DATA_DIR` | `/data` in Docker | Where the database and uploads are stored. Point it at the volume. |
-| `SESSION_SECRET` | generated and saved in `DATA_DIR` | Signs login sessions. |
+| `SESSION_SECRET` | generated and saved in `DATA_DIR` | Signs login sessions. Leave it unset, or use at least 32 random characters. |
 | `MAX_UPLOAD_MB` | `100` | Largest file people can send. |
 | `TURN_URLS` | none | Comma-separated TURN server URLs, e.g. `turn:turn.example.com:3478,turns:turn.example.com:5349`. |
 | `TURN_USERNAME` / `TURN_CREDENTIAL` | none | Credentials for the TURN server. |
