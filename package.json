@@ -1,0 +1,16 @@
+{
+  "name": "parley",
+  "version": "1.0.0",
+  "description": "Parley: a real-time messenger with photos, videos, voice messages, and voice and video calls.",
+  "private": true,
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server/index.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "license": "UNLICENSED"
+}

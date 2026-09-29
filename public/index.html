@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Parley</title>
+  <meta name="description" content="Chat, send photos, videos and voice messages, and call your people.">
+  <meta name="theme-color" content="#F4F1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+  <script type="module" src="/js/app.js"></script>
+</head>
+<body>
+  <div id="app"><div class="thread-empty" style="height:100%"><div class="spinner" role="status" aria-label="Loading"></div></div></div>
+  <div id="call-root"></div>
+  <input type="file" id="pick-media" accept="image/*,video/*" multiple hidden>
+  <input type="file" id="pick-camera" accept="image/*,video/*" capture="environment" hidden>
+  <input type="file" id="pick-file" multiple hidden>
+  <noscript>Parley needs JavaScript to run.</noscript>
+</body>
+</html>
